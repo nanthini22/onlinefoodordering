@@ -1,0 +1,97 @@
+<html>
+    <!----
+ <head>
+  <script type="text/javascript" >
+    window.addEventListener("load",start,false);
+function start()
+{
+    document.getElementById("lname").addEventListener("focus",focusname,false);
+    document.getElementById("lname").addEventListener("blur",blurname,false);
+    document.getElementById("email").addEventListener("mouseover",moveremail,false);
+    document.getElementById("email").addEventListener("mouseout",moutemail,false);
+    document.getElementById("lname").addEventListener("keyup",keyevent,false);
+    document.getElementById("form").addEventListener("submit",submitfunc,false);
+}   
+function focusname()
+{ 
+    document.getElementById("last").innerHTML="Enter your name";
+}
+function blurname()
+{ 
+    document.getElementById("last").innerHTML="last Name ";
+}
+function moveremail()
+{ 
+    document.getElementById("e").innerHTML="<p> email <span style='color:blue;'>(Enter valid email)</span></p>";
+}
+function moutemail()
+{ 
+    document.getElementById("e").innerHTML="email ";
+}
+function keyevent()
+{ 
+    var x=document.getElementById("fname");
+    x.value=x.value.toUpperCase();
+}
+function keydown()
+{
+    var x=document.getElementById("fname");
+    x.value=x.value.toLowerCase();
+}
+function submitfunc()
+{
+    
+    window.alert("Your order placed successfully !!");
+}
+
+  </script> 
+  --->
+   <style>
+     body {
+       background-image: url("bb.jpg");
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size:cover;
+     }
+     
+</style>
+
+</head>
+<body>
+<h2>DETAILS</h2>
+
+<form method ="post"   action=http://localhost:8080/ id="form">
+  
+    
+      
+      <br>
+            
+            <label for="fname" id="first">First name:</label><br>
+            <input type="text"  name="fname" placeholder="firstname" id="fname" required><br>
+            <br>
+            <label  id="last">Last name:</label><br>
+            <input type="text"  name="lname" placeholder="lastname"   id="lname" required><br>
+            <br>
+            <p id="e">Email: </p><br>  
+            <input type="email" id="email" name="email"placeholder="myeg@gmail" required> <br>
+            <br>  
+            <label for="phone number">Phone Number: </label><br> 
+            <input type="tel" id="phone" name="phone" placeholder="10 digits" pattern="[0-9]{10}" required>
+  
+            
+          <br>
+
+          <LABEL> DATE:</LABEL><input type="DATE"required>
+          <br>
+          <br>Enter your Address:<br>  
+         <textarea name="address"  id="address" rows="4" cols="50" required></textarea><br>  
+        <br>
+        <br>
+        
+ 
+    <br>
+    <input type="submit">
+
+</form>    
+</body>
+</html>
